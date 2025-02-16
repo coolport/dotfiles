@@ -1,7 +1,8 @@
 Reproduce:
+Ensure stow is installed
 
 ```bash
-git pull
+git clone https://github.com/coolport/dotfiles.git
 cd dotfiles
 stow .
 ```
