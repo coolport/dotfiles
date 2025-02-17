@@ -107,5 +107,7 @@ alias m="marks"
 alias j="jump"
 alias c="cd"
 alias lg="lazygit"
+alias ksesh='tmux list-sessions -F "#S" | grep -E "^[0-9]+$" | xargs -I {} tmux kill-session -t {}'
+
 
 
