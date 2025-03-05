@@ -29,4 +29,5 @@ return {
     enabled = false,
   },
   { "tpope/vim-fugitive" },
+  { "xiyaowong/transparent.nvim" },
 }
