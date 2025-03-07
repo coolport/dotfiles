@@ -1,6 +1,13 @@
 # rust etc
 export PATH="$HOME/.cargo/env:$PATH"
+export PATH="$HOME/.cargo/bin:$PATH"
 export PATH="/usr/sbin/hwinfo:$PATH"
+export PATH="/home/linuxbrew/.linuxbrew/bin:$PATH"
+export PATH="/home/linuxbrew/.linuxbrew/bin:$PATH"
+export PATH="/usr/local/bin/zig-linux-x86_64-0.12.0/:$PATH"
+export PATH="/usr/local/zig/:$PATH"
+export PATH="/root/.local/bin:$PATH"
+# export PATH=$PATH:/usr/local/zig
 
 # Ensure Android - subdir included
 export PATH="$HOME/Android/Sdk/emulator:$HOME/Android/Sdk/tools:$HOME/Android/Sdk/tools/bin:$HOME/Android/Sdk/platform-tools:$PATH"
@@ -103,11 +110,21 @@ bindkey "^[[5B" history-beginning-search-forward
 bindkey "^G" clear-screen
 bindkey '^G' clear-screen
 
+alias wifi="$HOME/loginscript.sh"
+alias bt="bluetoothctl"
+alias bt="bluetoothctl"
+
+alias f="yazi"
+alias killtmux="tmux kill-server && tmux || tmux~"
+alias mountwin="sudo mount -t ntfs-3g -o rw,uid=$(id -u),gid=$(id -g) /dev/nvme0n1p3 /mnt/windows"
+alias pdf="zathura"
+alias baseus="bt connect 41:BB:00:7F:64:92"
+alias touchpad="$HOME/xtoggle_touchpad.sh"
+alias sdnow="sudo shutdown now"
+alias rbnow="sudo reboot now"
 alias m="marks"
 alias j="jump"
 alias c="cd"
 alias lg="lazygit"
 alias ksesh='tmux list-sessions -F "#S" | grep -E "^[0-9]+$" | xargs -I {} tmux kill-session -t {}'
-
-
 
