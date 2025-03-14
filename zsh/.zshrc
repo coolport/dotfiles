@@ -114,6 +114,12 @@ alias wifi="$HOME/loginscript.sh"
 alias bt="bluetoothctl"
 alias bt="bluetoothctl"
 
+
+# cf() {
+#     cd "$(find . -type d -print | fzf)" || echo "No directory selected"
+# }
+alias cf='cd "$(find . -type d -print | fzf)"'
+alias pyconnect="source ./venv/bin/activate"
 alias f="yazi"
 alias killtmux="tmux kill-server && tmux || tmux~"
 alias mountwin="sudo mount -t ntfs-3g -o rw,uid=$(id -u),gid=$(id -g) /dev/nvme0n1p3 /mnt/windows"
