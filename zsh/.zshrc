@@ -54,7 +54,7 @@ DISABLE_MAGIC_FUNCTIONS="true"
 # DISABLE_LS_COLORS="true"
 
 # Uncomment the following line to disable auto-setting terminal title.
-# DISABLE_AUTO_TITLE="true"
+DISABLE_AUTO_TITLE="true"
 
 # Uncomment the following line to enable command auto-correction.
 ENABLE_CORRECTION="true"
@@ -108,7 +108,6 @@ prompt pure
 bindkey "^[[5A" history-beginning-search-backward
 bindkey "^[[5B" history-beginning-search-forward
 bindkey "^G" clear-screen
-bindkey '^G' clear-screen
 
 alias wifi="$HOME/loginscript.sh"
 alias bt="bluetoothctl"
@@ -118,6 +117,9 @@ alias bt="bluetoothctl"
 # cf() {
 #     cd "$(find . -type d -print | fzf)" || echo "No directory selected"
 # }
+alias statusd="ls -ld"
+alias lsd='ls -d */'
+alias unsource="deactivate"
 alias cf='cd "$(find . -type d -print | fzf)"'
 alias pyconnect="source ./venv/bin/activate"
 alias f="yazi"
@@ -132,5 +134,6 @@ alias m="marks"
 alias j="jump"
 alias c="cd"
 alias lg="lazygit"
+alias jc="cd ~/code"
 alias ksesh='tmux list-sessions -F "#S" | grep -E "^[0-9]+$" | xargs -I {} tmux kill-session -t {}'
 
