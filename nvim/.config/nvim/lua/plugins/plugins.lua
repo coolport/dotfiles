@@ -30,4 +30,5 @@ return {
   },
   { "tpope/vim-fugitive" },
   { "xiyaowong/transparent.nvim" },
+  { "mbbill/undotree" },
 }
