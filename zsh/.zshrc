@@ -7,6 +7,9 @@ export PATH="/home/linuxbrew/.linuxbrew/bin:$PATH"
 export PATH="/usr/local/bin/zig-linux-x86_64-0.12.0/:$PATH"
 export PATH="/usr/local/zig/:$PATH"
 export PATH="/root/.local/bin:$PATH"
+export PATH="$HOME/.local/bin:$PATH"
+export PATH=$PATH:/usr/local/go/bin
+export EDITOR="/usr/local/bin/nvim"
 # export PATH=$PATH:/usr/local/zig
 
 # Ensure Android - subdir included
@@ -57,7 +60,7 @@ DISABLE_MAGIC_FUNCTIONS="true"
 DISABLE_AUTO_TITLE="true"
 
 # Uncomment the following line to enable command auto-correction.
-ENABLE_CORRECTION="true"
+# ENABLE_CORRECTION="true"
 
 # Would you like to use another custom folder than $ZSH/custom?
 # ZSH_CUSTOM=/path/to/new-custom-folder
@@ -117,11 +120,13 @@ alias bt="bluetoothctl"
 # cf() {
 #     cd "$(find . -type d -print | fzf)" || echo "No directory selected"
 # }
+
+alias listfonts='fc-list : family | sort | uniq'
 alias statusd="ls -ld"
 alias lsd='ls -d */'
 alias unsource="deactivate"
 alias cf='cd "$(find . -type d -print | fzf)"'
-alias pyconnect="source ./venv/bin/activate"
+alias pysrc="source ./venv/bin/activate"
 alias f="yazi"
 alias killtmux="tmux kill-server && tmux || tmux~"
 alias mountwin="sudo mount -t ntfs-3g -o rw,uid=$(id -u),gid=$(id -g) /dev/nvme0n1p3 /mnt/windows"
@@ -134,6 +139,15 @@ alias m="marks"
 alias j="jump"
 alias c="cd"
 alias lg="lazygit"
+alias dfh="df -h"
+
 alias jc="cd ~/code"
 alias ksesh='tmux list-sessions -F "#S" | grep -E "^[0-9]+$" | xargs -I {} tmux kill-session -t {}'
 
+
+# bun completions
+[ -s "/home/aidan/.bun/_bun" ] && source "/home/aidan/.bun/_bun"
+
+# bun
+export BUN_INSTALL="$HOME/.bun"
+export PATH="$BUN_INSTALL/bin:$PATH"
