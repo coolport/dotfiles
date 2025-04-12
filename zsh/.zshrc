@@ -121,6 +121,7 @@ alias bt="bluetoothctl"
 #     cd "$(find . -type d -print | fzf)" || echo "No directory selected"
 # }
 
+alias p3="python3"
 alias listfonts='fc-list : family | sort | uniq'
 alias statusd="ls -ld"
 alias lsd='ls -d */'
@@ -140,6 +141,8 @@ alias j="jump"
 alias c="cd"
 alias lg="lazygit"
 alias dfh="df -h"
+alias duhs="du -hs"
+alias dirfiles="ls -astrhS"
 
 alias jc="cd ~/code"
 alias ksesh='tmux list-sessions -F "#S" | grep -E "^[0-9]+$" | xargs -I {} tmux kill-session -t {}'
